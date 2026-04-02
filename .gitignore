@@ -1,0 +1,32 @@
+# Environment variables (NEVER commit this)
+.env
+
+# Runtime-generated detection images
+detections/**/*.jpg
+detections/**/*.png
+detections/**/*.jpeg
+
+# CSV log — keep structure, ignore data
+detections/detections_log.csv
+
+# Surveillance log
+surveillance.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db

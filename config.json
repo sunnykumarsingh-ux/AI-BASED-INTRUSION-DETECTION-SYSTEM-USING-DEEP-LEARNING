@@ -1,0 +1,8 @@
+{
+  "confidence_threshold": 0.5,
+  "detection_timeout": 5,
+  "screenshot_interval": 10,
+  "yolo_skip_frames": 3,
+  "critical_objects": ["cell phone", "scissors", "pen", "laptop", "weapon"],
+  "warning_objects": ["book", "tablet"]
+}
