@@ -64,9 +64,11 @@ def recognize_face(face_img, faces_data, known_names, threshold=700):
 def face_worker(detection_queue: Queue, result_queue: Queue, reload_queue: Queue, stop_event):
     facedetect = None
     try:
-        facedetect = cv2.CascadeClassifier("data/haarcascade_frontalface_default.xml")
+        import cv2
+        cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+        facedetect = cv2.CascadeClassifier(cascade_path)
         if facedetect.empty():
-            print("[Face] Haar cascade not found!")
+            print(f"[Face] Haar cascade not found at {cascade_path}!")
             facedetect = None
     except Exception as e:
         print(f"[Face] Cascade error: {e}")
